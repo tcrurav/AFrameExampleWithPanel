@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telde</title>
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/components/my_metalness.js"></script>
+  <script src="js/components/my_opacity.js"></script>
+  <script src="js/components/my_color.js"></script>
+  <script src="js/components/change_scene.js"></script>
+  <script src="js/components/my_roughness.js"></script>
+  <script src="js/components/my_wireframe.js"></script>
+  <script src="js/my_menu.js"></script>
+</head>
+
+<body>
+  <div class="my-container" id="my-menu">
+    <label for="metalness" class="form-label">Metalness:</label>
+    <input type="range" class="form-range" id="metalness" name="metalness" min="0" max="1" value="0" step="0.1">
+
+    <label for="opacity" class="form-label">Opacity:</label>
+    <input type="range" class="form-range" id="opacity" name="opacity" min="0" max="1" value="0" step="0.1">
+
+    <label for="roughness" class="form-label">Roughness:</label>
+    <input type="range" class="form-range" id="roughness" name="roughness" min="0" max="1" value="0" step="0.1">
+
+    <label for="color">Color:</label>
+    <input type="color" id="color" name="color" value="#ff0000">
+
+    <div class="wireframe">
+      <label class="switch">
+        <input type="checkbox" id="wireframe" checked>
+        <span class="slider round"></span>
+      </label>
+      Wireframe
+    </div>
+  </div>
+
+  <a-scene>
+    <a-assets>
+      <img id="home" src="img/home_360.jpg" alt="home">
+      <img id="san-gregorio" src="img/san_gregorio_360.jpg" alt="San Gregorio">
+      <img id="silver-satin" src="img/silver_satin.jpg" alt="silver satin">
+    </a-assets>
+
+    <a-camera>
+      <a-cursor raycaster="objects: .clickable"></a-cursor>
+    </a-camera>
+
+    <a-box id="my-box" class="clickable" material="src: #silver-satin;" my-metalness="metalness: 0;"
+      my-color="color: #ff0000;" my-opacity="opacity: 1;" change-scene="from: #home; to: #san-gregorio"
+      position="0 0 -4" scale=".5 .5 .5" rotation="0 45 10" my-wireframe="wireframe: false"
+      animation="property: rotation; to: 0 360 180; dir: alternate; loop: true; dur: 5000">
+    </a-box>
+
+    <a-sky id="my-sky" material="src: #home">
+    </a-sky>
+  </a-scene>
+</body>
+
+</html>
