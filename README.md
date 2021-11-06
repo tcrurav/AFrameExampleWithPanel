@@ -1,4 +1,4 @@
-# A-Frame example with a panel control
+# A-Frame example with a control panel 
 
 Example with A-Frame with a control panel demonstrating the use of the standard material
 
