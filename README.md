@@ -1,6 +1,6 @@
-# A-Frame example with a material panel control
+# A-Frame example with a panel control
 
-This project shows a very simple example to test different materials features.
+Example with A-Frame with a control panel demonstrating the use of the standard material
 
 ## How to start
 
@@ -34,3 +34,4 @@ You can use for instance Live Server visual studio extension.
 * https://github.com/aframevr/aframe/blob/master/docs/components/sound.md. Very interesting project that explains the use of sounds with A-Frame.
 * https://freesound.org/. An excellent repository of sounds.
 * https://gist.github.com/PurpleBooth/109311bb0361f32d87a2. A very complete template for README.md files.
+* https://aframe.io/docs/1.2.0/components/material.html. The official material documentation.
