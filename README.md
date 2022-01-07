@@ -22,6 +22,8 @@ This project needs a web server.
 
 You can use for instance Live Server visual studio extension.
 
+You can try this project: https://a-frame-example.firebaseapp.com/example.html
+
 ## Created with...
 
 * [Visual Studio Code](https://code.visualstudio.com/) - The editor used for this project.
